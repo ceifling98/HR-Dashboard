@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>HR Dashboard</h1>
+      <button id="themeToggle">🌗 Toggle Theme</button>
+    </header>
+
+    <!-- Add Employee Form -->
+    <form id="addEmployeeForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="department" placeholder="Department" required />
+      
+      <select id="gender" required>
+        <option value="">Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Non-Binary">Non-Binary</option>
+        <option value="Transgender">Transgender</option>
+        <option value="Other">Other</option>
+        <option value="Prefer Not to Say">Prefer Not to Say</option>
+      </select>
+
+      <input type="number" id="salary" placeholder="Salary" required />
+
+      <select id="status" required>
+        <option value="">Status</option>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+        <option value="On Vacation">On Vacation</option>
+        <option value="Medical Leave">Medical Leave</option>
+        <option value="Terminated">Terminated</option>
+        <option value="Probation">Probation</option>
+      </select>
+
+      <button type="submit">Add Employee</button>
+    </form>
+
+    <!-- File Import & Export Buttons -->
+    <div class="file-controls">
+      <input type="file" id="fileInput" accept=".json,.csv" />
+      <button onclick="exportToCSV()">Export CSV</button>
+      <button onclick="exportToExcel()">Export Excel</button>
+      <button onclick="exportToPDF()">Export PDF</button>
+      <button onclick="downloadChartImage()">Download Chart</button>
+    </div>
+
+    <div class="dashboard">
+      <!-- Employee Table -->
+      <div class="left-panel">
+        <table id="employeeTable" class="display">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Gender</th>
+              <th>Salary</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filled dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Gender Pie Chart -->
+      <div class="right-panel">
+        <h3>Gender Breakdown</h3>
+        <canvas id="genderChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

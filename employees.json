@@ -1,0 +1,7 @@
+[
+    { "id": 1, "name": "John Smith", "department": "IT", "status": "Active", "gender": "Male", "salary": 75000 },
+    { "id": 2, "name": "Lisa Ray", "department": "HR", "status": "Active", "gender": "Female", "salary": 68000 },
+    { "id": 3, "name": "Alex Green", "department": "Finance", "status": "On Leave", "gender": "Male", "salary": 62000 },
+    { "id": 4, "name": "Emily Rose", "department": "IT", "status": "Terminated", "gender": "Female", "salary": 72000 }
+  ]
+  

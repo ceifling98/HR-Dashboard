@@ -1,0 +1,235 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#themeToggle {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+}
+
+body.dark #themeToggle {
+  background-color: #ddd;
+  color: #222;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+form input,
+form select,
+form button {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+body.dark form input,
+body.dark form select {
+  background-color: #2e2e2e;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* File Controls */
+.file-controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.file-controls input,
+.file-controls button {
+  padding: 10px;
+  font-size: 13px;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.left-panel {
+  flex: 2;
+  min-width: 300px;
+}
+
+.right-panel {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    flex: 1 1 100%;
+  }
+}
+
+/* Table */
+table.dataTable {
+  width: 100% !important;
+}
+
+table button {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table button:hover {
+  background-color: #c82333;
+}
+
+/* Canvas */
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+body.dark canvas {
+  background-color: #2e2e2e;
+}
+
+/* Gender Badge Styles */
+.gender-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.gender-badge.male {
+  background-color: #3498db;
+}
+
+.gender-badge.female {
+  background-color: #e91e63;
+}
+
+.gender-badge.nonbinary {
+  background-color: #9c27b0;
+}
+
+.gender-badge.transgender {
+  background-color: #00bcd4;
+}
+
+.gender-badge.other {
+  background-color: #795548;
+}
+
+.gender-badge.unknown {
+  background-color: #b0bec5;
+}
+
+/* Status Badge Styles */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.status-badge.active {
+  background-color: #28a745;
+}
+
+.status-badge.inactive {
+  background-color: #6c757d;
+}
+
+.status-badge.vacation {
+  background-color: #ffc107;
+  color: #222;
+}
+
+.status-badge.medical {
+  background-color: #17a2b8;
+}
+
+.status-badge.terminated {
+  background-color: #dc3545;
+}
+
+.status-badge.probation {
+  background-color: #6610f2;
+}
+
+.status-badge.unknown {
+  background-color: #adb5bd;
+}
+
+
+
+  
+  
